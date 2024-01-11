@@ -10,6 +10,7 @@ function App() {
   const [Countries, setCountries] = useState([]);
   const [CovidData, setCovidData] = useState([]);
   const [Country, setCountry] = useState("");
+  const [CountryImg, setImg] = useState([])
 
   const onChange = (e) => {
     setCountry(e.target.value);
@@ -37,7 +38,10 @@ function App() {
     fetch("https://disease.sh/v3/covid-19/countries/" + Country)
       .then((res) => res.json())
       .then((data) => {
+        console.log(data)
+        console.log(data.countryInfo)
         setCovidData(data);
+        setImg(data.countryInfo)
       });
   };
   return (
@@ -64,6 +68,7 @@ function App() {
         <div className="info">
           <h1>{Country}</h1>
         </div>
+      
       </div>
       <div className="container">
         <div className="row">

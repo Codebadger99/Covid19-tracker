@@ -81,17 +81,25 @@ select {
   border-radius: 10px;
 }
 
-.data{
+.data {
   display: flex;
   align-items: center;
   justify-content: center;
   margin-top: 2em;
 }
 
-.btn{
+.btn {
   color: #fff;
   background-color: aqua;
   padding: 0.7em 1em;
   border: none;
   outline: none;
+}
+
+@media screen and (max-width: 360px) {
+  .select {
+    width: 10vw;
+    margin: 0 auto;
+    padding-top: 1rem;
+  }
 }
