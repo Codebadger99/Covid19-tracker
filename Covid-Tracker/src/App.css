@@ -36,6 +36,17 @@ select {
   text-transform: capitalize;
 }
 
+.img{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+img{
+  width: 20em;
+}
+
 .container {
   margin-top: 4em;
 }
@@ -90,7 +101,7 @@ select {
 
 .btn {
   color: #fff;
-  background-color: aqua;
+  background-color: blue;
   padding: 0.7em 1em;
   border: none;
   outline: none;
